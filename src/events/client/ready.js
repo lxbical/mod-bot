@@ -7,7 +7,7 @@ module.exports = class Ready extends Event {
     }
 
     async exec() {
-        this.client.user.setActivity(`bad members`, { type: "WATCHING" });
+        this.client.user.setActivity(`with ticket touts`, { type: "PLAYING" });
 
         let allMembers = new Set();
         this.client.guilds.cache.forEach((guild) => {
