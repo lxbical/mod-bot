@@ -51,7 +51,7 @@ module.exports = class Ban extends Interaction {
             });
         }
 
-        if(int.member.roles.highest.position < member.roles.highest.position) {
+        if(int.member.roles.highest.position <= member.roles.highest.position) {
             return int.reply({
                 content: "You can't ban someone with a higher role than you!",
                 ephemeral: true,
