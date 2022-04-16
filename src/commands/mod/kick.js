@@ -51,7 +51,7 @@ module.exports = class Kick extends Interaction {
             });
         }
 
-        if(int.member.roles.highest.position < member.roles.highest.position) {
+        if(int.member.roles.highest.position <= member.roles.highest.position) {
             return int.reply({
                 content: "You can't kick someone with a higher role than you!",
                 ephemeral: true,
