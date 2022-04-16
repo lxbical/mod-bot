@@ -62,7 +62,7 @@ module.exports = class TimeOut extends Interaction {
 
         if(int.member.roles.highest.position <= member.roles.highest.position) {
             return int.reply({
-                content: "You can't timeout someone with a higher role than you!",
+                content: "<:myMetroCOMMUNICATIONS:963933515861352498> This user is apart of the Metro Staffing Team. To perform moderation on this user, please contact a Network Chief or Team Coordinator.",
                 ephemeral: true,
             });
         }
