@@ -53,7 +53,7 @@ module.exports = class Mute extends Interaction {
 
         if(int.member.roles.highest.position <= member.roles.highest.position) {
             return int.reply({
-                content: "You can't mute someone with a higher role than you!",
+                content: "<:myMetroCOMMUNICATIONS:963933515861352498> This user is apart of the Metro Staffing Team. To perform moderation on this user, please contact a Network Chief or Team Coordinator. If you are trying to **mute this user, please use timeout**",
                 ephemeral: true,
             });
         }
@@ -61,21 +61,21 @@ module.exports = class Mute extends Interaction {
 
         if(!member.manageable) {
             return int.reply({
-                content: "I can't mute that user!",
+                content: "I can't mute that user! If you are trying to **mute this user, please use timeout**",
                 ephemeral: true,
             });
         }
 
         if(!member.voice.channel) {
             return int.reply({
-                content: "That user isn't in a voice channel!",
+                content: "That user isn't in a voice channel! If you are trying to **mute this user, please use timeout**",
                 ephemeral: true,
             });
         }
 
         if(member.voice.selfMute || member.voice.mute) {
             return int.reply({
-                content: "That user is already muted!",
+                content: "That user is already muted! If you are trying to **mute this user, please use timeout**",
                 ephemeral: true,
             });
         }
