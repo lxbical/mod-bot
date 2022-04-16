@@ -35,18 +35,13 @@ module.exports = class Clean extends Interaction {
         });
     }
     async exec(int, data) {
-        if (!int.member.permissions.has("MANAGE_GUILD"))
-            return int.reply({
-                content: "You don't have the required permissions to do this!",
-                ephemeral: true,
-            });
 
             let amount = int.options.getInteger("amount")
             let filter = int.options.getString("filter")
 
             if (amount > 100) {
                 return int.reply({
-                    content: "You can't delete more than 100 messages at the same time!",
+                    content: "<:myMetroCOMMUNICATIONS:963933515861352498> MyMetro can't delete more than 100 messages at once due to department reasons. For this limit to be removed, please contact a team coordinator",
                     ephemeral: true,
                 });
             }
@@ -92,7 +87,7 @@ module.exports = class Clean extends Interaction {
               })
 
           return int.reply({
-              content: "Succesfully deleted messages!",
+              content: "<:myMetroCOMMUNICATIONS:963933515861352498> MyMetro has successfully purged and logged the chat successfully.",
               ephemeral: true,
           })
         }
